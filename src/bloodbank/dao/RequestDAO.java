@@ -11,9 +11,9 @@ public class RequestDAO {
             ps.setString(1, r.getBloodGroup());
             ps.setString(2, r.getLocation());
             ps.executeUpdate();
-            System.out.println("✅ Blood request added successfully!");
+            System.out.println("Blood request added successfully!");
         } catch (Exception e) {
-            System.out.println("❌ Error adding request: " + e.getMessage());
+            System.out.println("Error adding request: " + e.getMessage());
         }
     }
 }

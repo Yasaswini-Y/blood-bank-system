@@ -15,10 +15,10 @@ public class InventoryDAO {
                 System.out.println(rs.getString("blood_group") + " → " + rs.getInt("units") + " units");
             }
             if (!found) {
-                System.out.println("✅ All blood groups have sufficient stock.");
+                System.out.println("All blood groups have sufficient stock.");
             }
         } catch (Exception e) {
-            System.out.println("❌ Error checking stock: " + e.getMessage());
+            System.out.println("Error checking stock: " + e.getMessage());
         }
     }
 }

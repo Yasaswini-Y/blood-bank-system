@@ -13,6 +13,7 @@ public class Donor {
     private LocalDate lastDonationDate;
     private String contact;
 
+
     // Full constructor
     public Donor(String name, int age, double weight, String bloodGroup,
                  String location, String healthCondition,

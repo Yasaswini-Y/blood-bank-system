@@ -30,12 +30,12 @@ public class DonorDAO {
 
             int rows = ps.executeUpdate();
             if (rows > 0)
-                System.out.println("✅ Donor added successfully!");
+                System.out.println("Donor added successfully!");
             else
-                System.out.println("⚠️ Failed to add donor.");
+                System.out.println("Failed to add donor.");
 
         } catch (SQLException e) {
-            System.out.println("❌ SQL Error adding donor: " + e.getMessage());
+            System.out.println("SQL Error adding donor: " + e.getMessage());
         }
     }
 
@@ -66,7 +66,7 @@ public class DonorDAO {
             }
 
         } catch (SQLException e) {
-            System.out.println("❌ SQL Error retrieving donors: " + e.getMessage());
+            System.out.println("SQL Error retrieving donors: " + e.getMessage());
         }
         return donors;
     }
@@ -86,12 +86,12 @@ public class DonorDAO {
             success = rows > 0;
 
             if (success)
-                System.out.println("✅ Donor updated successfully!");
+                System.out.println("Donor updated successfully!");
             else
-                System.out.println("⚠️ Donor ID not found!");
+                System.out.println("Donor ID not found!");
 
         } catch (SQLException e) {
-            System.out.println("❌ SQL Error updating donor: " + e.getMessage());
+            System.out.println("SQL Error updating donor: " + e.getMessage());
         }
         return success;
     }
@@ -126,7 +126,7 @@ public class DonorDAO {
             }
 
         } catch (SQLException e) {
-            System.out.println("❌ SQL Error finding donors: " + e.getMessage());
+            System.out.println("SQL Error finding donors: " + e.getMessage());
         }
         return donors;
     }

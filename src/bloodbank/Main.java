@@ -68,11 +68,11 @@ public class Main {
                     String loc = sc.nextLine();
                     List<Donor> donors = donorDAO.findByBloodAndLocation(bg, loc);
                     if (donors.isEmpty()) {
-                        System.out.println("⚠️ No donors found!");
+                        System.out.println(" No donors found!");
                     } else {
                         System.out.println("\nAvailable Donors:");
                         for (Donor d : donors) {
-                            System.out.println("🩸 " + d.getName() + " - 📞 " + d.getContact() + " - 📍 " + d.getLocation());
+                            System.out.println(d.getName() + " - 📞 " + d.getContact() + " - 📍 " + d.getLocation());
                         }
                     }
                     break;
@@ -81,7 +81,7 @@ public class Main {
                     System.out.println("\n--- Donor List ---");
                     List<Donor> allDonors = donorDAO.getAllDonors();
                     if (allDonors.isEmpty()) {
-                        System.out.println("⚠️ No donors found.");
+                        System.out.println("No donors found.");
                     } else {
                         System.out.printf("%-5s %-15s %-5s %-7s %-10s %-15s %-15s %-15s%n",
                                 "ID", "Name", "Age", "Weight", "Blood", "Location", "Health", "Contact");
@@ -95,12 +95,12 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.println("👋 Thank you for using Blood Bank System!");
+                    System.out.println("Thank you for using Blood Bank System!");
                     System.exit(0);
                     break;
 
                 default:
-                    System.out.println("❌ Invalid choice. Try again!");
+                    System.out.println("Invalid choice. Try again!");
             }
         }
     }

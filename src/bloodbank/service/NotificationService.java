@@ -9,13 +9,13 @@ public class NotificationService {
 
     public void notifyDonors(List<Donor> donors) {
         if (donors == null || donors.isEmpty()) {
-            System.out.println("⚠️ No donors to notify.");
+            System.out.println("No donors to notify.");
             return;
         }
 
         try (Connection con = DBConnection.getConnection()) {
             for (Donor d : donors) {
-                System.out.println("📢 Notification sent to: " + d.getName() + " (" + d.getContact() + ")");
+                System.out.println("Notification sent to: " + d.getName() + " (" + d.getContact() + ")");
                 String sql = "INSERT INTO notifications (donor_id, message) VALUES (?, ?)";
                 PreparedStatement ps = con.prepareStatement(sql);
                 ps.setInt(1, d.getDonorId());
@@ -23,7 +23,7 @@ public class NotificationService {
                 ps.executeUpdate();
             }
         } catch (Exception e) {
-            System.out.println("❌ Error sending notifications: " + e.getMessage());
+            System.out.println("Error sending notifications: " + e.getMessage());
         }
     }
 }
